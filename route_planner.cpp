@@ -40,7 +40,7 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
       node->g_value = current_node->g_value + current_node.distance(*node);
       open_list.emplace_back(node);
       node->visited = true;
-      node.distance = true;
+      node->distance = true;
     }
 }
 
