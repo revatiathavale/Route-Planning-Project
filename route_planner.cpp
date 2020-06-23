@@ -61,7 +61,7 @@ bool Compare(const RouteModel::Node* node1, const RouteModel:: Node* node2) {
 RouteModel::Node *RoutePlanner::NextNode() {
 	std::sort(open_list.begin(), open_list.end(), Compare);
     auto * nodePointer = open_list[0];
-    open_list.front();
+    open_list.erase(open_list.begin());
     return nodePointer;
 }
 
